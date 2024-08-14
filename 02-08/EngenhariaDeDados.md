@@ -1,3 +1,9 @@
+Nome do Estagiário: Valentina de Oliveira Leite
+
+Data: 02/08/2024
+
+
+
 # Introdução a Engenharia de Dados
 
 Utilizada para transformar dados não polidos em informações úteis, se concentrando na criação e manutenção de sistemas para juntar, guardar e verificar altos volumes de dados. Sendo útil para tomar decisões, análise de negócios e desenvolver aprendizado de máquinas.  Carregando para um lugar aonde possam ser úteis que seria o “Data Warehouse”. A engenharia de dados tem uma grande relevância para as indústrias, pois é de extrema importância para poderem atender melhor os seus clientes e ter benefícios a outras empresas, porque os dados gerados só tendem a crescer e ele é utilizado para melhorar os processos operacionais das empresas.

@@ -8,7 +8,7 @@ SHOW TABLES
 
 Logo em seguida utilizo "Create table" para criar a tabela e após o "(" e codificado as colunas e os seus respectivos tipos.
 
-~~~~
+~~~~ sql
 %hive
 --Criar tabela
 CREATE TABLE campanhas (
@@ -26,7 +26,7 @@ CREATE TABLE campanhas (
 
 Embaixo do "CREATE TABLE campanhas" e adicionado outro bloco de código que tem como proposito definir o formato, campos e dados da tabela. 
 
-~~~~
+~~~~ sql
 --Define o formato da tabela
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
@@ -37,7 +37,7 @@ TBLPROPERTIES ("skip.header.line.count"="1")
 
 O próximo código tem o mesmo princípio que o de cima, só muda as colunas, tipos e o nome da tabela.
 
-~~~~
+~~~~ sql
 %hive
 --Criar tabela
 CREATE TABLE purchases (
@@ -61,7 +61,7 @@ TBLPROPERTIES ("skip.header.line.count"="1")
 
 Nessa linha de código ele carrega os dados do arquivo que está no bucket S3 para dentro da tabela especificado no final do código.
 
-~~~
+~~~ sql
 %hive
 --Carrega dados da tabela 
 LOAD DATA INPATH 's3a://tarefanova/campaigns_2023_hist.csv' INTO TABLE campanhas
@@ -72,7 +72,7 @@ LOAD DATA INPATH 's3a://tarefanova/purchases_2023.csv' INTO TABLE purchases
 
 O próximo bloco código "client_insights" reúne todos esses dados em um só lugar, dando uma visão abrangente do que está acontecendo com os clientes em termos de compras, locais de compra, campanhas recebidas, e muito mais.
 
-~~~
+~~~ sql
 %hive
 CREATE VIEW client_insights AS
 SELECT
@@ -146,7 +146,7 @@ GROUP BY
 
 A última linha serve para selecionar tudo o que tem na tabela que foi criada acima.
 
-~~~
+~~~ sql 
 %hive
 SELECT * FROM client_insights
 ~~~
